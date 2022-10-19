@@ -200,7 +200,7 @@ span {
   grid-column: 2 / 3;
   background-color: #52525b;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 4rem 42rem 4rem 1fr;
   padding: 2.4rem;
 }
@@ -213,11 +213,10 @@ span {
 }
 .projects-grid {
   display: grid;
-  flex-wrap: wrap;
-  justify-content: space-around;
   grid-row: 2/ 3;
   grid-column: 1 / 2;
   grid-template-columns: 1fr 1fr;
+  gap: 12px 0;
 }
 .project-item {
   background-color: #fff;
@@ -303,12 +302,21 @@ span {
   grid-column: 2 / 3;
   background-color: white;
   border-radius: 11px;
+  padding: 2.6rem;
+  display: flex;
+  flex-direction: column;
 }
 .trending-profiles {
-  border: 2px solid rebeccapurple;
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 1.4rem;
+  border-radius: 11px;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.trending-profiles:hover {
+  background-color: gainsboro;
 }
 
 .trending-profile-pic {
@@ -329,3 +337,39 @@ span {
   font-size: 1.4rem;
 }
 /*main section*/
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
